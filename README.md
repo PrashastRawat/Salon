@@ -13,8 +13,8 @@ A full-stack salon booking app. Customers browse services and book an appointmen
 | Field    | Value                        |
 | -------- | ---------------------------- |
 | URL      | `/admin/login`               |
-| Email    | `REPLACE_WITH_DEMO_EMAIL`    |
-| Password | `REPLACE_WITH_DEMO_PASSWORD` |
+| Email    | `admin@salon.com`    |
+| Password | `Admin@123` |
 
 ## Features
 

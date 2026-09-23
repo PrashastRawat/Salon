@@ -74,8 +74,6 @@ There is no public registration route. The first admin is created with `seedAdmi
 
 ## 7. Challenges
 
-> Edit this section so it reflects what you actually ran into.
-
 - **Preventing double bookings under concurrency.** Solved with the unique partial index and handling error 11000.
 - **Cross-domain authentication.** The frontend (Vercel) and backend (Render) are on different domains, so the cookie needs `secure` and `sameSite: none`, CORS needs `credentials: true` with an exact origin, and `trust proxy` is set behind Render's proxy.
 - **Freeing slots after cancellation.** A plain unique index would block rebooking a cancelled slot, so the index is partial and only applies to active statuses.
