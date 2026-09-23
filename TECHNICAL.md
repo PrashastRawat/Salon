@@ -71,6 +71,7 @@ There is no public registration route. The first admin is created with `seedAdmi
 - **Routes / controllers / middleware structure.** Keeps each file small and lets someone new find things quickly.
 - **No admin registration endpoint.** An open register route would let anyone become an admin, so the admin is seeded instead.
 - **Small feature set.** I focused on the required flow being correct rather than adding extra features.
+- **Server-side validation in its own module.** `validateBooking.js` checks and cleans booking input (required fields, formats, lengths, no past dates) before it reaches the database. The frontend validates for user experience, but the server can't trust it because the API can be called directly.
 
 ## 7. Challenges
 
@@ -81,8 +82,7 @@ There is no public registration route. The first admin is created with `seedAdmi
 
 ## 8. Future Improvements
 
-- Stronger server-side validation (email/phone format, no past dates, time format, length limits).
-- Fixed time slots and business hours, with a slot picker that shows only free times.
+- Fixed time slots and business hours (currently any time can be requested).
 - Duration-aware conflicts, and per-staff availability so multiple bookings can run in parallel.
 - Email or SMS confirmation and reminders.
 - Route guards on the admin pages, and refresh-safe login using `/api/auth/profile`.
